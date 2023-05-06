@@ -19,12 +19,16 @@ namespace Cronometro{
             string data = Console.ReadLine().ToLower(); // Pegando o dado que o cliente digitou, ToLower coloca qualquer letra digitada em minusculo
             char type = char.Parse(data.Substring(data.Length-1, 1)); //Pegando o ultimo caracter.
             int time = int.Parse(data.Substring(0, data.Length-1)); // Pegando todos os caracteres, menos o ultimo.
-            Console.WriteLine(type);
-            Console.WriteLine(time);
+            int multiplier = 1;
+
+            if(type == 'm')
+                multiplier = 60;
+
+            if(time == 0)
+                System.Environment.Exit(0);
+
+            Start(time * multiplier);
         }
-
-
-
         static void Start(int time){
             
             int currentTime = 0;
@@ -41,6 +45,7 @@ namespace Cronometro{
             Console.Clear();
             Console.WriteLine("Cronômetro finalizado!");
             Thread.Sleep(2000);
+            Menu();
         }
     }
 }
