@@ -4,12 +4,24 @@ using System.Threading;
 namespace Cronometro{
     class Program{
         static void Main(string[] args){
-            Start();
+            Menu();
         }
 
-        static void Start(){
+        static void Menu(){
+        
+            Console.Clear();
+
+            Console.WriteLine("S = Segundo");
+            Console.WriteLine("M = Minuto");
+            Console.WriteLine("0 = Sair");
+            Console.WriteLine("Quanto tempo deseja cronometrar?");
+
+        }
+
+
+
+        static void Start(int time){
             
-            int time = 10;
             int currentTime = 0;
 
             while(currentTime != time){
@@ -20,6 +32,10 @@ namespace Cronometro{
                 // currentTime++; // exibir de 0 a 10
                 Thread.Sleep(1000); // a cada interação demora 1 segundo.
             }
+
+            Console.Clear();
+            Console.WriteLine("Cronômetro finalizado!");
+            Thread.Sleep(2000);
         }
     }
 }
