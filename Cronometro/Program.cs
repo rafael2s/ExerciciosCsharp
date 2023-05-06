@@ -17,8 +17,10 @@ namespace Cronometro{
             Console.WriteLine("Quanto tempo deseja cronometrar?");
 
             string data = Console.ReadLine().ToLower(); // Pegando o dado que o cliente digitou, ToLower coloca qualquer letra digitada em minusculo
-            char type = char.Parse(data.Substring(data.Length-1, 1));
+            char type = char.Parse(data.Substring(data.Length-1, 1)); //Pegando o ultimo caracter.
+            int time = int.Parse(data.Substring(0, data.Length-1)); // Pegando todos os caracteres, menos o ultimo.
             Console.WriteLine(type);
+            Console.WriteLine(time);
         }
 
 
