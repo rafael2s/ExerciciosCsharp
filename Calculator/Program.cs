@@ -12,6 +12,22 @@ namespace Calculator
             Multiplicacao();
         }
 
+        static void Menu(){
+            
+            Console.Clear();
+            
+            Console.WriteLine("Projeto Calculator: ");
+            Console.WriteLine("1 - Soma");
+            Console.WriteLine("2 - Subtração");
+            Console.WriteLine("3 - Divisão");
+            Console.WriteLine("4 - Multiplicação");
+
+            Console.WriteLine("------------------");
+            Console.WriteLine("Selecione uma opção: ");
+
+            short resultado = short.Parse(Console.ReadLine());
+        }
+
         static void Soma() {
 
             Console.Clear();
