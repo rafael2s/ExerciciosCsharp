@@ -28,7 +28,17 @@ namespace EditorTexto{
 
         }
         static void Editar(){
+            Console.Clear();
+            Console.WriteLine("Digite seu texto abaixo");
+            Console.WriteLine("-----------------------");
+            string text = "";
 
+            do{
+                text += Console.ReadLine();
+                text += Environment.NewLine;
+            }while(Console.ReadKey().Key != ConsoleKey.Escape);
+
+            Console.Write(text);
         }
     }
 }
