@@ -39,9 +39,9 @@ namespace EditorTexto{
                 text += Environment.NewLine;
             }while(Console.ReadKey().Key != ConsoleKey.Escape);
 
-            Console.Write(text);
+            Salvar(text);
         }
-        static void Salvar(StringContent text){
+        static void Salvar(string text){
             
             Console.Clear();
             Console.WriteLine("Escolha o caminho que deseja salvar o arquivo!");
@@ -50,6 +50,10 @@ namespace EditorTexto{
             using(var arquivo = new StreamWriter(caminho)){
                 arquivo.Write(text);
             }
+
+            Console.WriteLine($"Arquivo {caminho} salvo com sucesso!");
+            Console.ReadLine();
+            Menu();
         }
     }
 }
