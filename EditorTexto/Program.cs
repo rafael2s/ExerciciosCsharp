@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace EditorTexto{
     class Program{
@@ -39,6 +40,16 @@ namespace EditorTexto{
             }while(Console.ReadKey().Key != ConsoleKey.Escape);
 
             Console.Write(text);
+        }
+        static void Salvar(StringContent text){
+            
+            Console.Clear();
+            Console.WriteLine("Escolha o caminho que deseja salvar o arquivo!");
+            var caminho = Console.ReadLine();
+
+            using(var arquivo = new StreamWriter(caminho)){
+                arquivo.Write(text);
+            }
         }
     }
 }
