@@ -21,6 +21,8 @@ namespace EditorHTML{
 
             Console.WriteLine("===========");
             Console.WriteLine("Salvar arquivo?");
+
+            Viewer.Show(arquivo.ToString());
         }
     }
 }
