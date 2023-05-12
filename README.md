@@ -5,8 +5,6 @@ Este repositório é uma coleção de exercícios e projetos para aprimorar minh
 * Áreas de programação incluídas
 * Linguagens de programação
 * Desenvolvimento web
-* Ciência de dados
-* Segurança da informação
 
 ## Como usar
 Para usar este repositório, você precisará cloná-lo em sua máquina local:
