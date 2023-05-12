@@ -1,20 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\ProjetosCSharp\\EditorHTML\\EditorHTML.csproj": {}
+    "E:\\dev\\ExerciciosCsharp\\EditorHTML\\EditorHTML.csproj": {}
   },
   "projects": {
-    "C:\\dev\\ProjetosCSharp\\EditorHTML\\EditorHTML.csproj": {
+    "E:\\dev\\ExerciciosCsharp\\EditorHTML\\EditorHTML.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\ProjetosCSharp\\EditorHTML\\EditorHTML.csproj",
+        "projectUniqueName": "E:\\dev\\ExerciciosCsharp\\EditorHTML\\EditorHTML.csproj",
         "projectName": "EditorHTML",
-        "projectPath": "C:\\dev\\ProjetosCSharp\\EditorHTML\\EditorHTML.csproj",
-        "packagesPath": "C:\\Users\\rafael.silva.MULTI\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\ProjetosCSharp\\EditorHTML\\obj\\",
+        "projectPath": "E:\\dev\\ExerciciosCsharp\\EditorHTML\\EditorHTML.csproj",
+        "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+        "outputPath": "E:\\dev\\ExerciciosCsharp\\EditorHTML\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\rafael.silva.MULTI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

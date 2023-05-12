@@ -59,7 +59,7 @@ namespace EditorHTML{
     
         public static void HandleMenuOption(short opt){
             switch(opt){
-                case 1: Console.WriteLine("Editor"); break;
+                case 1: Editor.Show(); break;
                 case 2: Console.WriteLine("View"); break;
                 case 0: {
                     Console.Clear();
