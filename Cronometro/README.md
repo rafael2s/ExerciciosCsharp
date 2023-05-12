@@ -1,0 +1,3 @@
+## Cronômetro
+
+Funções, Thread, Sleep.
