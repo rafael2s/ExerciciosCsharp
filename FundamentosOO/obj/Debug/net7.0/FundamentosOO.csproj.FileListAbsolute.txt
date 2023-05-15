@@ -1,0 +1,15 @@
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\bin\Debug\net7.0\FundamentosOO.exe
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\bin\Debug\net7.0\FundamentosOO.deps.json
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\bin\Debug\net7.0\FundamentosOO.runtimeconfig.json
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\bin\Debug\net7.0\FundamentosOO.dll
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\bin\Debug\net7.0\FundamentosOO.pdb
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.csproj.AssemblyReference.cache
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.AssemblyInfoInputs.cache
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.AssemblyInfo.cs
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.csproj.CoreCompileInputs.cache
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.dll
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\refint\FundamentosOO.dll
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.pdb
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\FundamentosOO.genruntimeconfig.cache
+C:\dev\ProjetosCsharp\ExerciciosCsharp\FundamentosOO\obj\Debug\net7.0\ref\FundamentosOO.dll
