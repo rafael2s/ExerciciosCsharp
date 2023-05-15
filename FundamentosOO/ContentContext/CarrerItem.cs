@@ -1,6 +1,6 @@
 namespace FundamentosOO.ContentContext{
 
-        public class CarrerItem{
+        public class CarrerItem : Base{
         public CarrerItem(int order, string? title, string? descripiton, Course? course)
         {
 

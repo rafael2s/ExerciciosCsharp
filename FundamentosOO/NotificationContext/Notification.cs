@@ -1,4 +1,4 @@
-namespace FundamentosOO.ContentContext{
+namespace FundamentosOO.NotificationContext {
     public sealed class Notification{
 
         public Notification(){

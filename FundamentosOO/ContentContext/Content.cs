@@ -1,15 +1,12 @@
 namespace FundamentosOO.ContentContext{
 
-    public abstract class Content{
+    public abstract class Content : Base{
 
         public Content(string title, string url){
             
-            Id = Guid.NewGuid(); //Gerador de hash de 32 caracteres, a ideia é gerar o ID automaticamente. Muito com para utilicar com o banco de dados.
             Title = title;
             Url = url;
         }
-        public Guid Id { get; set; }
-
         public string? Title { get; set; }   
 
         public string? Url { get; set; } 
