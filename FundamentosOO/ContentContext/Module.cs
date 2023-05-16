@@ -1,3 +1,5 @@
+using FundamentosOO.SharedContext;
+
 namespace FundamentosOO.ContentContext{
     
         public class Module : Base{

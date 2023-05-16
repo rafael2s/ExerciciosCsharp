@@ -1,4 +1,5 @@
 using FundamentosOO.ContentContext.Enums;
+using FundamentosOO.SharedContext;
 
 namespace FundamentosOO.ContentContext  {
 
