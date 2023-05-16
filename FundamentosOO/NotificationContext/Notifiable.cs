@@ -4,8 +4,18 @@ namespace FundamentosOO.NotificationContext{
         
         public List<Notification> Notifications { get; set; }
 
-            public void AddRange(IEnumerable<Notification> notification){
-                Notifications.AddRange(notification);
-            }
+        public Notifiable(){
+            Notifications = new List<Notification>();
+        }
+
+        public void AddNotification(Notification notification){
+            Notifications.Add(notification);
+        }
+        public void AddNotifications(IEnumerable<Notification> notification){
+            Notifications.AddRange(notification);
+        }
+
+        public bool IsInvalid => Notifications.Any();
+
     }
 }
