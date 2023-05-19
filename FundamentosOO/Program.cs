@@ -1,4 +1,5 @@
 ﻿using FundamentosOO.ContentContext;
+using FundamentosOO.SubscriptionContext;
 
 namespace FundamentosOO;
 class Program
@@ -47,6 +48,10 @@ class Program
                 foreach(var notification in item.Notifications){
                     Console.WriteLine($"{notification.Property} - {notification.Message}");
                 }
+
+                var payPalSubscription = new PayPalSubscription();
+                var student = new Student();
+                student.Subscriptions.Add(payPalSubscription);
             }
         }
     }  
