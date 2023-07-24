@@ -1,3 +1,6 @@
+using FundamentosOO.NotificationContext;
+using FundamentosOO.SharedContext;
+
 namespace FundamentosOO.ContentContext{
 
         public class CarrerItem : Base{
@@ -5,7 +8,7 @@ namespace FundamentosOO.ContentContext{
         {
 
             if(course == null)
-                throw new System.Exception("O curso não pode ser nulo");
+                AddNotification(new Notification("Course", "Curso inválido"));
 
             Order = order;
             Title = title;

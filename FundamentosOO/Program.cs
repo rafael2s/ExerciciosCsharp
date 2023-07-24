@@ -1,4 +1,5 @@
 ﻿using FundamentosOO.ContentContext;
+using FundamentosOO.SubscriptionContext;
 
 namespace FundamentosOO;
 class Program
@@ -28,7 +29,7 @@ class Program
 
         var carrers = new List<Carrer>();
         var carrerDotNet = new Carrer("Especialist .NET", "especialista-dotnet");
-        var CarrerItem2 = new CarrerItem(2, "Aprenda C#", "", courseOO);
+        var CarrerItem2 = new CarrerItem(2, "Aprenda C#", "", null);
         var CarrerItem = new CarrerItem(1, "Comece por aqui", "", courseCsharp);
         var CarrerItem3 = new CarrerItem(3, "Aprenda AspNet", "", courseAspNet);
 
@@ -41,8 +42,16 @@ class Program
             Console.WriteLine(carrer.Title);
             foreach(var item in carrer.Items.OrderBy(x => x.Order)){
                 Console.WriteLine($"{item.Order} - {item.Title}");
-                Console.WriteLine(item.Course.Title);
-                Console.WriteLine(item.Course.Level);
+                Console.WriteLine(item.Course?.Title);
+                Console.WriteLine(item.Course?.Level);
+
+                foreach(var notification in item.Notifications){
+                    Console.WriteLine($"{notification.Property} - {notification.Message}");
+                }
+
+                var payPalSubscription = new PayPalSubscription();
+                var student = new Student();
+                student.Subscriptions.Add(payPalSubscription);
             }
         }
     }  
