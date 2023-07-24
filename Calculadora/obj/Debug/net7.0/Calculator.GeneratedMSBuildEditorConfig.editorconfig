@@ -8,8 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Calculator
-<<<<<<< HEAD
 build_property.ProjectDir = c:\dev\ProjetosCSharp\Calculadora\
-=======
-build_property.ProjectDir = c:\dev\ProjetosCsharp\ExerciciosCsharp\Calculadora\
->>>>>>> 49f11945669d100ec3d3da27f599a38742621b4a
