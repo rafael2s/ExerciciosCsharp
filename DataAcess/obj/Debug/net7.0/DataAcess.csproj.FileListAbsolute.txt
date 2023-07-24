@@ -48,3 +48,4 @@ C:\dev\ProjetosCSharp\DataAcess\obj\Debug\net7.0\refint\DataAcess.dll
 C:\dev\ProjetosCSharp\DataAcess\obj\Debug\net7.0\DataAcess.pdb
 C:\dev\ProjetosCSharp\DataAcess\obj\Debug\net7.0\DataAcess.genruntimeconfig.cache
 C:\dev\ProjetosCSharp\DataAcess\obj\Debug\net7.0\ref\DataAcess.dll
+C:\dev\ProjetosCSharp\DataAcess\bin\Debug\net7.0\Dapper.dll
