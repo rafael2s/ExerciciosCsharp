@@ -15,8 +15,9 @@ class Program
             //CreateManyCategories(connection);
             //UpadeteCategory(connection);
             //DeleteCategory(connection);
-            ListCategories(connection);
+            //ListCategories(connection);
             //GetCategory(connection);
+            ExecuteProcedure(connection);
             
         } 
     }
@@ -145,5 +146,13 @@ class Program
             }
         });
         Console.WriteLine($"{rows} linhas inseridas!");
+    }
+
+    static void ExecuteProcedure(SqlConnection connection){
+        var procedure = "spDeleteStudent";
+        var pars = new { StudentId = "aa78e451-e5d2-4b07-8928-58b4d90d4286" };
+        var affectedRows = connection.Execute(procedure, pars, commandType: System.Data.CommandType.StoredProcedure);
+
+        Console.WriteLine($"{affectedRows} linhas afetadas");
     }
 }
