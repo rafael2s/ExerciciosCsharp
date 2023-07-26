@@ -2,14 +2,12 @@
 using Microsoft.Data.SqlClient;
 using DataAcess.Models;
 
-
 namespace DataAcess;
 class Program
 {
     static void Main(string[] args)
     {
         const string connectionString = "Server=localhost,1433;Database=dataacessdb;User ID=SA;Password=#sa123456;TrustServerCertificate=true"; // TrustServerCertificate=true utilizado pois estava dando erro de certificado ao tentar ler dados do banco
-
         using (var connection = new SqlConnection(connectionString)){
             //CreateCategory(connection);
             //CreateManyCategories(connection);
@@ -20,11 +18,10 @@ class Program
             //ExecuteProcedure(connection);
             //ExecuteReadProcedure(connection);
             //ExecuteScalar(connection);
-            ReadView(connection);
-            
+            //ReadView(connection);     
+            OneToOne(connection);      
         } 
     }
-
     static void ListCategories(SqlConnection connection){
 
         var categories = connection.Query<Category>("SELECT [Id], [Title] FROM [Category]");
@@ -32,7 +29,6 @@ class Program
             Console.WriteLine($"{item.Id} - {item.Title}");
         }
     }
-
     static void GetCategory(SqlConnection connection)
     {
         var category = connection
@@ -45,7 +41,6 @@ class Program
         Console.WriteLine($"{category.Id} - {category.Title}");
 
     }
-
     static void CreateCategory(SqlConnection connection){
         var category = new Category();
         category.Id = Guid.NewGuid();
@@ -77,7 +72,6 @@ class Program
         });
         Console.WriteLine($"{rows} linhas inseridas!");
     }
-
     static void UpadeteCategory(SqlConnection connection){
         var updadeQuery = "UPDATE [Category] SET [Title]=@title WHERE [Id]=@id";
         var rows = connection.Execute(updadeQuery, new{
@@ -97,7 +91,6 @@ class Program
 
         Console.WriteLine($"{rows} registros excluídos");
     }
-
     static void CreateManyCategories(SqlConnection connection){
        
         var category = new Category();
@@ -150,7 +143,6 @@ class Program
         });
         Console.WriteLine($"{rows} linhas inseridas!");
     }
-
     static void ExecuteProcedure(SqlConnection connection){
         var procedure = "spDeleteStudent";
         var pars = new { StudentId = "aa78e451-e5d2-4b07-8928-58b4d90d4286" };
@@ -168,7 +160,6 @@ class Program
             Console.WriteLine($"{item.Id} - {item.Title}");
         }
     }
-
     static void ExecuteScalar(SqlConnection connection){
         var category = new Category();
         category.Title = "Amazon AWS";
@@ -202,12 +193,24 @@ class Program
         });
         Console.WriteLine($"A categoria inserida foi: {id}");
     }
-
     static void ReadView(SqlConnection connection){
         var sql = "SELECT * FROM [vwCourses]";
         var courses = connection.Query(sql);
         foreach (var item in courses){
             Console.WriteLine($"{item.Id} - {item.Title}");
+        }
+    }
+    static void OneToOne(SqlConnection connection){
+        var sql = @"SELECT * FROM [CareerItem] INNER JOIN [Course] ON [CareerItem].[CourseId] = [Course].[Id]";
+        var items = connection.Query<CareerItem, Course, CareerItem>(
+                sql,
+                (careerItem, course) => {
+                    careerItem.Course = course; 
+                    return careerItem;
+                },splitOn: "Id");
+
+        foreach(var item in items){
+            Console.WriteLine($"{item.Title} - Curso: {item.Course.Title}");
         }
     }
 }
